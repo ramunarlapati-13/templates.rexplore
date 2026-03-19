@@ -8,7 +8,7 @@ const REXPLORE_CATALOG = {
   CONTENT: ["Niche Blog", "News Portal", "Magazine", "Wiki/Knowledge Base"],
   COMMUNITY: ["Social Network", "Forum", "Q&A Site", "Membership Portal"],
   EDUCATION: ["E-learning", "University", "Nonprofit", "Government"],
-  FUNCTIONAL: ["Landing Page", "Booking", "Directory", "Crowdfunding", "Job Board", "AI Chatbot", "Web Tools"],
+  FUNCTIONAL: ["Landing Page", "Booking", "Directory", "Crowdfunding", "Job Board", "AI Chatbot", "Web Tools", "Dashboard"],
   ENTERTAINMENT: ["Video Stream", "Music Stream", "Gaming"]
 };
 
@@ -23,8 +23,44 @@ const categoryIcons = {
   ENTERTAINMENT: <Play />,
 };
 
-function App() {
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import DashboardPage from './pages/Dashboard';
+import CorporatePage from './pages/Corporate';
+import BrochurePage from './pages/Brochure';
+import ServiceProviderPage from './pages/ServiceProvider';
+import CatalogPage from './pages/Catalog';
+import StartupPage from './pages/Startup';
+
+
+
+
+
+
+function AppContent() {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('BUSINESS');
+
+  const handleSubtypeClick = (subtype) => {
+    if (subtype === 'Dashboard') {
+      navigate('/dashboard');
+    }
+    if (subtype === 'Corporate') {
+      navigate('/corporate');
+    }
+    if (subtype === 'Brochure') {
+      navigate('/brochure');
+    }
+    if (subtype === 'Service Provider') {
+      navigate('/service-provider');
+    }
+    if (subtype === 'Catalog') {
+      navigate('/catalog');
+    }
+    if (subtype === 'Startup') {
+      navigate('/startup');
+    }
+    // Add more mappings as more codes are uploaded
+  };
 
   console.log("Rexplore Technologies: Full Subtype List Loaded.");
 
@@ -84,10 +120,19 @@ function App() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {REXPLORE_CATALOG[selectedCategory].map((subtype) => (
-              <div key={subtype} className="group p-8 rounded-3xl border border-white/5 bg-white/[0.03] hover:bg-primary transition-all cursor-pointer">
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold text-white group-hover:text-black transition-colors uppercase italic tracking-tighter">{subtype}</span>
+            {REXPLORE_CATALOG[selectedCategory].map((subtype, index) => (
+              <div 
+                key={subtype} 
+                onClick={() => handleSubtypeClick(subtype)}
+                className="group p-8 rounded-3xl border border-white/5 bg-white/[0.03] hover:bg-primary transition-all cursor-pointer"
+              >
+                <div className="flex justify-between items-center text-left">
+                  <div className="flex items-center gap-4">
+                    <span className="text-[10px] font-black text-primary group-hover:text-black opacity-40 transition-colors uppercase italic tracking-widest leading-none bg-primary/10 group-hover:bg-black/10 px-2 py-1 rounded">
+                      {(index + 1).toString().padStart(2, '0')}
+                    </span>
+                    <span className="text-lg font-bold text-white group-hover:text-black transition-colors uppercase italic tracking-tighter">{subtype}</span>
+                  </div>
                   <div className="h-2 w-2 rounded-full bg-primary group-hover:bg-black transition-colors" />
                 </div>
               </div>
@@ -100,6 +145,22 @@ function App() {
         © 2024 REXPLORE TECHNOLOGIES. ALL RIGHTS RESERVED.
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<AppContent />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/corporate" element={<CorporatePage />} />
+        <Route path="/brochure" element={<BrochurePage />} />
+        <Route path="/service-provider" element={<ServiceProviderPage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/startup" element={<StartupPage />} />
+      </Routes>
+    </Router>
   );
 }
 
