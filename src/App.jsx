@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LayoutGrid, ShoppingBag, User, FileText, Users, GraduationCap, Settings, Play } from 'lucide-react';
 
 const REXPLORE_CATALOG = {
-  BUSINESS: ["Corporate V1", "Corporate V2", "Brochure V1", "Brochure V2", "Brochure V3", "Service Provider V1", "Service Provider V2", "Catalog", "Startup"],
+  BUSINESS: ["Corporate V1", "Corporate V2", "Brochure V1", "Brochure V2", "Brochure V3", "Service Provider V1", "Service Provider V2", "Catalog V1", "Catalog V2", "Startup"],
   ECOMMERCE: ["Marketplace", "Brand Store", "Auction", "Dropshipping"],
   PERSONAL: ["Portfolio", "Resume", "Personal Blog", "Memorial"],
   CONTENT: ["Niche Blog", "News Portal", "Magazine", "Wiki/Knowledge Base"],
@@ -40,6 +40,8 @@ const TemplateDock = () => {
     '/brochure-v3': [{ name: 'Brochure V1', path: '/brochure-v1' }, { name: 'Brochure V2', path: '/brochure-v2' }],
     '/service-provider-v1': [{ name: 'Service Provider V2', path: '/service-provider-v2' }],
     '/service-provider-v2': [{ name: 'Service Provider V1', path: '/service-provider-v1' }],
+    '/catalog-v1': [{ name: 'Catalog V2', path: '/catalog-v2' }],
+    '/catalog-v2': [{ name: 'Catalog V1', path: '/catalog-v1' }],
   };
 
   const currentPath = location.pathname;
@@ -86,7 +88,8 @@ import BrochureV2Page from './pages/BrochureV2';
 import BrochureV3Page from './pages/BrochureV3';
 import ServiceProviderV1Page from './pages/ServiceProviderV1';
 import ServiceProviderV2Page from './pages/ServiceProviderV2';
-import CatalogPage from './pages/Catalog';
+import CatalogV1Page from './pages/CatalogV1';
+import CatalogV2Page from './pages/CatalogV2';
 import StartupPage from './pages/Startup';
 
 
@@ -123,8 +126,11 @@ function AppContent() {
     if (subtype === 'Service Provider V2') {
       navigate('/service-provider-v2');
     }
-    if (subtype === 'Catalog') {
-      navigate('/catalog');
+    if (subtype === 'Catalog V1') {
+      navigate('/catalog-v1');
+    }
+    if (subtype === 'Catalog V2') {
+      navigate('/catalog-v2');
     }
     if (subtype === 'Startup') {
       navigate('/startup');
@@ -232,7 +238,8 @@ function App() {
         <Route path="/brochure-v3" element={<BrochureV3Page />} />
         <Route path="/service-provider-v1" element={<ServiceProviderV1Page />} />
         <Route path="/service-provider-v2" element={<ServiceProviderV2Page />} />
-        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/catalog-v1" element={<CatalogV1Page />} />
+        <Route path="/catalog-v2" element={<CatalogV2Page />} />
         <Route path="/startup" element={<StartupPage />} />
       </Routes>
     </Router>

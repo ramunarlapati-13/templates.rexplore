@@ -18,7 +18,7 @@ const PRODUCTS = [
   { id: 9, name: "Vortex Cooling Rail", category: "Thermal", scale: "Cluster", material: "Cryo-Grade Steel", price: 7800 },
 ];
 
-const Catalog = () => {
+const CatalogV1Page = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -291,4 +291,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default CatalogV1Page;
