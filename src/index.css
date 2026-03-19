@@ -21,6 +21,21 @@
   box-shadow: 0 0 15px rgba(222, 142, 255, 0.1);
   border: 1px solid rgba(222, 142, 255, 0.2);
 }
+@keyframes blink-yellow {
+  0%, 100% { opacity: 1; border-color: rgba(250, 246, 0, 0.4); box-shadow: 0 0 10px rgba(250, 246, 0, 0.2); }
+  50% { opacity: 0.6; border-color: rgba(250, 246, 0, 0.1); box-shadow: 0 0 2px rgba(250, 246, 0, 0); }
+}
+
+.animate-blink-yellow {
+  animation: blink-yellow 1.5s infinite ease-in-out;
+}
+
+.technical-grid {
+  background-image: radial-gradient(circle, #4c4634 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.15;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }

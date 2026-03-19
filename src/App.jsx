@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LayoutGrid, ShoppingBag, User, FileText, Users, GraduationCap, Settings, Play } from 'lucide-react';
 
 const REXPLORE_CATALOG = {
-  BUSINESS: ["Corporate", "Brochure", "Service Provider", "Catalog", "Startup"],
+  BUSINESS: ["Corporate V1", "Corporate V2", "Brochure V1", "Brochure V2", "Brochure V3", "Service Provider", "Catalog", "Startup"],
   ECOMMERCE: ["Marketplace", "Brand Store", "Auction", "Dropshipping"],
   PERSONAL: ["Portfolio", "Resume", "Personal Blog", "Memorial"],
   CONTENT: ["Niche Blog", "News Portal", "Magazine", "Wiki/Knowledge Base"],
@@ -23,10 +23,65 @@ const categoryIcons = {
   ENTERTAINMENT: <Play />,
 };
 
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
+import { Home, Zap } from 'lucide-react';
+
+const TemplateDock = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  if (location.pathname === '/' || location.pathname === '/catalog') return null;
+
+  const suggestions = {
+    '/corporate-v1': [{ name: 'Corporate V2', path: '/corporate-v2' }],
+    '/corporate-v2': [{ name: 'Corporate V1', path: '/corporate-v1' }],
+    '/brochure-v1': [{ name: 'Brochure V2', path: '/brochure-v2' }, { name: 'Brochure V3', path: '/brochure-v3' }],
+    '/brochure-v2': [{ name: 'Brochure V1', path: '/brochure-v1' }, { name: 'Brochure V3', path: '/brochure-v3' }],
+    '/brochure-v3': [{ name: 'Brochure V1', path: '/brochure-v1' }, { name: 'Brochure V2', path: '/brochure-v2' }],
+  };
+
+  const currentPath = location.pathname;
+  const currentSuggestions = suggestions[currentPath] || [];
+
+  return (
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center gap-4">
+      {currentSuggestions.length > 0 && (
+        <div className="flex gap-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <span className="text-[10px] text-white/40 uppercase tracking-widest font-black self-center mr-2">Try Versions:</span>
+          {currentSuggestions.map((s) => (
+            <button
+              key={s.path}
+              onClick={() => navigate(s.path)}
+              className="bg-neutral-900/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-[10px] font-black uppercase text-white/70 hover:text-white hover:border-yellow-400 hover:bg-neutral-800 transition-all shadow-xl animate-blink-yellow hover:animate-none"
+            >
+              {s.name}
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="bg-white/10 backdrop-blur-2xl border border-white/20 px-6 py-3 rounded-full flex items-center gap-6 shadow-2xl">
+        <Link to="/" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors border-r border-white/10 pr-6">
+          <LayoutGrid size={18} />
+          <span className="text-sm font-black uppercase tracking-tighter">Home</span>
+        </Link>
+        <button 
+          onClick={() => alert('Infrastructure Inquiry Recorded: Our solutions architect will contact you to deploy this blueprint.')}
+          className="flex items-center gap-2 bg-yellow-400 text-black px-5 py-2 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(250,230,0,0.3)]"
+        >
+          <Zap size={14} fill="black" />
+          I want this type
+        </button>
+      </div>
+    </div>
+  );
+};
+
 import DashboardPage from './pages/Dashboard';
-import CorporatePage from './pages/Corporate';
-import BrochurePage from './pages/Brochure';
+import CorporateV1Page from './pages/CorporateV1';
+import CorporateV2Page from './pages/CorporateV2';
+import BrochureV1Page from './pages/BrochureV1';
+import BrochureV2Page from './pages/BrochureV2';
+import BrochureV3Page from './pages/BrochureV3';
 import ServiceProviderPage from './pages/ServiceProvider';
 import CatalogPage from './pages/Catalog';
 import StartupPage from './pages/Startup';
@@ -44,11 +99,20 @@ function AppContent() {
     if (subtype === 'Dashboard') {
       navigate('/dashboard');
     }
-    if (subtype === 'Corporate') {
-      navigate('/corporate');
+    if (subtype === 'Corporate V1') {
+      navigate('/corporate-v1');
     }
-    if (subtype === 'Brochure') {
-      navigate('/brochure');
+    if (subtype === 'Corporate V2') {
+      navigate('/corporate-v2');
+    }
+    if (subtype === 'Brochure V1') {
+      navigate('/brochure-v1');
+    }
+    if (subtype === 'Brochure V2') {
+      navigate('/brochure-v2');
+    }
+    if (subtype === 'Brochure V3') {
+      navigate('/brochure-v3');
     }
     if (subtype === 'Service Provider') {
       navigate('/service-provider');
@@ -151,12 +215,16 @@ function AppContent() {
 function App() {
   return (
     <Router>
+      <TemplateDock />
       <Routes>
         <Route path="/" element={<AppContent />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/corporate" element={<CorporatePage />} />
-        <Route path="/brochure" element={<BrochurePage />} />
-        <Route path="/service-provider" element={<ServiceProviderPage />} />
+        <Route path="/corporate-v1" element={<CorporateV1Page />} />
+        <Route path="/corporate-v2" element={<CorporateV2Page />} />
+        <Route path="/brochure-v1" element={<BrochureV1Page />} />
+        <Route path="/brochure-v2" element={<BrochureV2Page />} />
+        <Route path="/brochure-v3" element={<BrochureV3Page />} />
+       <Route path="/service-provider" element={<ServiceProviderPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/startup" element={<StartupPage />} />
       </Routes>
