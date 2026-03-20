@@ -50,7 +50,7 @@ const CorporateV1Page = () => {
 
             <div className="flex">
                 {/* Side Navigation */}
-                <aside className="fixed left-0 top-16 h-[calc(100vh-64px)] w-20 hover:w-64 transition-all duration-300 group bg-[#121416] border-r-2 border-[#849396] z-40 flex flex-col overflow-hidden">
+                <aside className="hidden md:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-20 hover:w-64 transition-all duration-300 group bg-[#121416] border-r-2 border-[#849396] z-40 flex-col overflow-hidden">
                     <div className="p-4 border-b-2 border-[#3b494c]">
                         <div className="flex items-center gap-4">
                             <div className="min-w-[40px] h-10 border-2 border-[#00e5ff] p-1">
@@ -87,9 +87,9 @@ const CorporateV1Page = () => {
                 </aside>
 
                 {/* Main Content */}
-                <main className="ml-20 flex-1 min-h-screen">
+                <main className="ml-0 md:ml-20 flex-1 min-h-screen">
                     {/* Hero Section */}
-                    <section className="relative h-[800px] flex items-center px-12 border-b-2 border-[#849396] overflow-hidden">
+                    <section className="relative min-h-[600px] md:h-[800px] flex items-center px-6 md:px-12 border-b-2 border-[#849396] overflow-hidden">
                         <div className="absolute inset-0 z-0">
                             <img alt="Industrial" className="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT9ath4OZOxYa5A3Z78KbLZU8Gel4IDwuxAQspmsQeWeY7N2_fiOeEpSH3oLq-Vb-VBcNXg2LzT36wFdXann3_3-EEx6Nc1QoR2FkmiBxb1pTPqv657qMkLlOXNJjSVaH5nZNqroj6Q-rrC0PrAW9oL990W5mc6EzuW3k5VU9Y5jJ8K5kVNfN9i0t270l3GDR_LIgFBYbU63Hck1KmX3W_SRGLeSQpHMkNSqScBQTEavoy_PaBZY5oQlyWsppkp6rYOILSpd6xAVRr" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#121416] via-transparent to-transparent"></div>
@@ -106,7 +106,7 @@ const CorporateV1Page = () => {
                             <motion.h1 
                                 initial={{ opacity: 0, y: 30 }} 
                                 animate={{ opacity: 1, y: 0 }} 
-                                className="text-7xl md:text-9xl font-['Manrope'] font-black tracking-tighter leading-[0.85] mb-12 uppercase"
+                                className="text-5xl md:text-9xl font-['Manrope'] font-black tracking-tighter leading-[0.85] mb-12 uppercase"
                             >
                                 Structural <br /> Stability <br /> <span className="text-[#00e5ff]">Globalized.</span>
                             </motion.h1>
@@ -119,12 +119,12 @@ const CorporateV1Page = () => {
                             >
                                 <div className="corner-bracket-tr"></div>
                                 <div className="corner-bracket-bl"></div>
-                                <p className="text-xl text-[#bac9cc] leading-relaxed mb-8 font-medium italic">
+                                <p className="text-lg md:text-xl text-[#bac9cc] leading-relaxed mb-8 font-medium italic">
                                     "Redefining industrial foundations through hyper-precise engineering and scalable digital architecture."
                                 </p>
-                                <div className="flex gap-6">
-                                    <button className="bg-[#00e5ff] text-[#00363d] px-10 py-5 font-bold tracking-widest uppercase text-xs hover:scale-105 transition-all">DOWNLOAD_SPEC</button>
-                                    <button className="border-2 border-[#849396] px-10 py-5 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all">VIEW_INFRA</button>
+                                <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                                    <button className="bg-[#00e5ff] text-[#00363d] px-8 md:px-10 py-4 md:py-5 font-bold tracking-widest uppercase text-xs hover:scale-105 transition-all">DOWNLOAD_SPEC</button>
+                                    <button className="border-2 border-[#849396] px-8 md:px-10 py-4 md:py-5 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all">VIEW_INFRA</button>
                                 </div>
                             </motion.div>
                         </div>
@@ -150,8 +150,8 @@ const CorporateV1Page = () => {
 
                     {/* Capabilities Grid */}
                     <section className="py-32 px-12 bg-[#121416]">
-                        <div className="flex justify-between items-end mb-20">
-                            <h2 className="text-5xl font-['Manrope'] font-black tracking-tighter uppercase">Operational_Core</h2>
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-4">
+                            <h2 className="text-3xl md:text-5xl font-['Manrope'] font-black tracking-tighter uppercase">Operational_Core</h2>
                             <span className="text-[#849396] font-mono text-sm tracking-widest">SEQ_A_9942</span>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-[#849396]">

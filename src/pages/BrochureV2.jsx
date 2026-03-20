@@ -49,7 +49,7 @@ const BrochureV2Page = () => {
                             className="md:col-span-8"
                         >
                             <span className="spaceGrotesk text-[#77dd6a] uppercase tracking-[0.2em] text-xs mb-4 block font-bold">System Designation // 001</span>
-                            <h1 className="notoSerif text-6xl md:text-8xl italic tracking-tight leading-[0.9] text-white mb-8 overflow-visible">
+                            <h1 className="notoSerif text-4xl md:text-8xl italic tracking-tight leading-[0.9] text-white mb-8 overflow-visible">
                                 The Future is <span className="text-[#abd600] text-glow">Bioluminescent</span>.
                             </h1>
                             <p className="max-w-xl text-lg text-[#c6c7bd] font-light leading-relaxed">

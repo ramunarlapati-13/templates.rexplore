@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div className="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary min-h-screen">
       {/* SideNavBar */}
-      <aside className="h-screen w-64 fixed left-0 top-0 bg-[#131314] flex flex-col py-8 px-4 gap-2 z-50">
+      <aside className="h-screen w-64 fixed left-0 top-0 bg-[#131314] hidden lg:flex flex-col py-8 px-4 gap-2 z-50">
         <div className="mb-10 px-4">
           <h1 className="text-lg font-black text-[#bc13fe] font-headline uppercase tracking-tighter">Dev Console</h1>
           <p className="text-[10px] text-zinc-500 font-label tracking-widest mt-1">v2.0.4-alpha</p>
@@ -40,7 +40,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content Canvas */}
-      <main className="ml-64 p-8 min-h-screen">
+      <main className="ml-0 lg:ml-64 p-4 md:p-8 min-h-screen">
         <header className="flex justify-between items-end mb-12">
           <div>
             <h2 className="text-4xl font-headline font-bold tracking-tighter text-white">System Dynamics</h2>
@@ -180,7 +180,7 @@ const Dashboard = () => {
         </div>
       </main>
 
-      <footer className="ml-64 bg-[#0e0e0f] w-full border-t border-white/5">
+      <footer className="ml-0 lg:ml-64 bg-[#0e0e0f] w-full border-t border-white/5">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
           <div className="col-span-1 md:col-span-1">
             <h5 className="text-xl font-bold text-white font-headline tracking-tighter mb-4">CyberKinetic</h5>

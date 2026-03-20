@@ -111,7 +111,7 @@ const CatalogV3Page = () => {
                 <main className="flex-1 p-8 md:p-16">
                     <header className="mb-16">
                         <div className="flex items-baseline gap-4 mb-4">
-                            <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase text-[#decd99] leading-none">Catalog</h1>
+                            <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase text-[#decd99] leading-none">Catalog</h1>
                             <span className="text-[#ffc191] font-black text-xl">[024]</span>
                         </div>
                         <p className="text-[#cdc6b7] max-w-2xl text-lg leading-relaxed">

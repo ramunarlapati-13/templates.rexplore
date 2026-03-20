@@ -33,7 +33,7 @@ const Startup = () => {
                   <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-8">
                      Velocity Series v1.0
                   </span>
-                  <h1 className="text-7xl md:text-[10rem] font-headline font-black tracking-tighter uppercase leading-[0.8] mb-12">
+                  <h1 className="text-5xl md:text-[10rem] font-headline font-black tracking-tighter uppercase leading-[0.8] mb-12">
                     FAST<br/>FORWARD <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-secondary italic">EVERYTHING.</span>
                   </h1>
                   <p className="text-lg md:text-xl text-zinc-500 font-['Inter'] leading-relaxed max-w-xl mb-12">
@@ -145,7 +145,7 @@ const Startup = () => {
       <section className="py-40 px-8 md:px-24 bg-surface-container relative">
          <div className="absolute inset-0 bg-primary/5 opacity-40 pointer-events-none" />
          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl md:text-8xl font-headline font-black uppercase tracking-tighter mb-12">DON'T WAIT FOR<br/>THE <span className="text-primary italic">FUTURE.</span></h2>
+            <h2 className="text-3xl md:text-8xl font-headline font-black uppercase tracking-tighter mb-12">DON'T WAIT FOR<br/>THE <span className="text-primary italic">FUTURE.</span></h2>
             
             <div className="relative max-w-xl mx-auto group">
                <div className="absolute inset-0 bg-primary/20 blur-[30px] opacity-0 group-focus-within:opacity-100 transition-opacity" />

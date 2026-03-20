@@ -103,7 +103,7 @@ const CorporateV2Page = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-6xl md:text-8xl font-['Manrope'] font-extrabold tracking-tighter text-white leading-[0.9] mb-8 uppercase"
+                className="text-5xl md:text-8xl font-['Manrope'] font-extrabold tracking-tighter text-white leading-[0.9] mb-8 uppercase"
               >
                 Architecting <br/>
                 <span className="text-[#00e5ff]">Next-Gen</span> <br/>
@@ -120,11 +120,11 @@ const CorporateV2Page = () => {
                 <p className="text-[#bac9cc] font-['Inter'] text-lg leading-relaxed mb-6 uppercase tracking-tight">
                   Precision-engineered digital frameworks for REXPLORE TECHNOLOGIES. We deploy high-fidelity kinetic engines to accelerate corporate structural logistics.
                 </p>
-                <div className="flex gap-4">
-                  <button className="bg-[#00e5ff] text-[#00363d] px-8 py-4 font-bold tracking-widest uppercase text-xs active:scale-95 transition-all">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="bg-[#00e5ff] text-[#00363d] px-8 py-4 font-bold tracking-widest uppercase text-xs active:scale-95 transition-all w-full sm:w-auto">
                     DEPLOY_ENGINE
                   </button>
-                  <button className="border-2 border-[#849396] text-[#c3f5ff] px-8 py-4 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all">
+                  <button className="border-2 border-[#849396] text-[#c3f5ff] px-8 py-4 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all w-full sm:w-auto">
                     SPEC_SHEET
                   </button>
                 </div>

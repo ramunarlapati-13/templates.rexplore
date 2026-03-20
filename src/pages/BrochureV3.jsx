@@ -64,7 +64,7 @@ const BrochureV3Page = () => {
 
             <main className="lg:ml-64 pt-16">
                 {/* Hero Section */}
-                <section className="relative h-[921px] flex items-end px-6 md:px-12 pb-24 overflow-hidden border-b border-neutral-800">
+                <section className="relative min-h-[600px] md:h-[921px] flex items-end px-6 md:px-12 pb-24 overflow-hidden border-b border-neutral-800">
                     <div className="absolute inset-0 technical-grid pointer-events-none"></div>
                     <div className="absolute inset-0 pointer-events-none">
                         <div className="absolute top-0 right-0 w-[800px] h-[800px] border border-[#98907a] opacity-10 rotate-12 -translate-y-1/2 translate-x-1/4"></div>

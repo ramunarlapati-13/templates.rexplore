@@ -42,7 +42,7 @@ const BrochureV1Page = () => {
             </nav>
 
             {/* Hero Section */}
-            <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#121416] pt-16">
+            <section className="relative min-h-[600px] md:h-screen w-full flex items-center justify-center overflow-hidden bg-[#121416] pt-16">
                 <div className="absolute inset-0 z-0">
                     <img alt="Industrial Architecture" className="w-full h-full object-cover opacity-40 grayscale scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC3ociGABdqReN63r8RNL2_HOdbCZNyqqjalD_lqyYQWytP968OfRDM5DMO9dFQVplC6oLKyjGwuDSvHUffpnakxVmo89WSzaXMYkxVtyh4LxKwszLo9WtUBH-LZDx942z_2LkEbvJAPMpGUi6j0e1kIxRj5NqXxgkO9N7jrJ6Fo3obtndfgCIRimYBzkHIdlLe2KS2WLxhhKih0h8CLnPJF1LzPAaH0VlbzRNW1Itk7LJUl4KQje-oMI23RcQCRYkp0tH3HPBhEvL" />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0c0e10]/20 via-[#121416]/60 to-[#121416]"></div>
@@ -54,15 +54,15 @@ const BrochureV1Page = () => {
                         className="w-full md:w-[55%]"
                     >
                         <p className="font-bold uppercase tracking-[0.4em] text-[#00e5ff] text-sm mb-4">PROJECT_ORIGIN: ALPHA_STATION</p>
-                        <h1 className="font-['Manrope'] font-extrabold text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter leading-[0.85] mb-8">
+                        <h1 className="font-['Manrope'] font-extrabold text-4xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter leading-[0.85] mb-8">
                             KINETIC<br/>
                             <span className="text-[#00e5ff]">ENGINE_V1</span>
                         </h1>
-                        <div className="flex gap-4">
-                            <button className="bg-[#00e5ff] text-[#00363d] px-8 py-4 font-bold tracking-widest uppercase text-xs active:scale-95 transition-all">
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <button className="bg-[#00e5ff] text-[#00363d] px-8 py-4 font-bold tracking-widest uppercase text-xs active:scale-95 transition-all w-full sm:w-auto">
                                 INITIALIZE_SCAN
                             </button>
-                            <button className="border-2 border-[#849396] text-[#c3f5ff] px-8 py-4 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all">
+                            <button className="border-2 border-[#849396] text-[#c3f5ff] px-8 py-4 font-bold tracking-widest uppercase text-xs hover:border-[#00e5ff] transition-all w-full sm:w-auto">
                                 VIEW_DATA_SHEET
                             </button>
                         </div>

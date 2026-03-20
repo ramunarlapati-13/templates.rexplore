@@ -54,7 +54,7 @@ const ServiceProviderV2Page = () => {
                         <motion.h1 
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="font-['Space_Grotesk'] text-[10vw] md:text-[8rem] leading-[0.85] font-black text-white uppercase tracking-tighter mb-8 -ml-1 md:-ml-2"
+                            className="font-['Space_Grotesk'] text-7xl md:text-[8rem] leading-[0.85] font-black text-white uppercase tracking-tighter mb-8 -ml-1 md:-ml-2"
                         >
                             THE <br/><span className="text-[#aa3000] italic">KINETIC</span> <br/>ENGINE
                         </motion.h1>
@@ -172,7 +172,7 @@ const ServiceProviderV2Page = () => {
                         <img alt="Industrial Project" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC00opaN-PT_FCsQXKbGBg3MoofrrOtVzdYYpFF672kyRPgu0vaAwR8z7bE9uo1lyLfs3bdvLATbQwuxVe0YIdQoPf9v1GrFNaj1vlNW16fsg808oR3clDYlTcM24X1y359YdjZC0df7ad9WqlqEbq7kwxO7O1ieJaZ8-2l6EkG9j9e8CA1hr2lxSwCskV5U3QSqK3BhvrFn1AI8so_Ffn7dug1d57VXt-cqh2MEI45KGWparcWA2XY7VVEorenneJD_MWDMX-EeuQ2" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 p-12">
-                            <h2 className="font-['Space_Grotesk'] text-7xl font-black text-white uppercase tracking-tighter leading-none mb-4 -ml-2">THE OMEGA <br/>SYNTHESIS</h2>
+                            <h2 className="font-['Space_Grotesk'] text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-4 -ml-2">THE OMEGA <br/>SYNTHESIS</h2>
                             <p className="text-[#aa3000] font-bold tracking-[0.3em] font-['Space_Grotesk'] text-sm mb-6 uppercase">CASE STUDY / 009 / BERLIN</p>
                             <button className="bg-white text-[#1a1c1c] font-['Space_Grotesk'] font-black px-12 py-4 hover:bg-[#aa3000] hover:text-white transition-all uppercase tracking-widest text-xs">
                                 VIEW DOCUMENTATION
@@ -189,7 +189,7 @@ const ServiceProviderV2Page = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="max-w-4xl w-full glass-void border-8 border-[#aa3000] p-12 md:p-20 relative z-10 shadow-[24px_24px_0px_0px_#aa3000]"
                     >
-                        <h2 className="font-['Space_Grotesk'] text-5xl md:text-6xl font-black text-white uppercase mb-8 leading-none tracking-tighter">INITIATE <br/>CONTACT</h2>
+                        <h2 className="font-['Space_Grotesk'] text-4xl md:text-6xl font-black text-white uppercase mb-8 leading-none tracking-tighter">INITIATE <br/>CONTACT</h2>
                         <p className="text-[#c6c6c6] mb-12 text-lg font-light max-w-lg leading-relaxed">Enter project parameters for immediate engineer assessment. Our response time is calculated in minutes, not days.</p>
                         <form className="space-y-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -28,7 +28,7 @@ const ServiceProvider = () => {
          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-end">
             <div className="flex-1">
                <span className="text-[10px] text-primary font-bold tracking-[0.5em] uppercase mb-8 block">Utility Driven // Expertise</span>
-               <h1 className="text-6xl md:text-9xl font-headline font-black tracking-tighter uppercase leading-[0.8] mb-12">
+               <h1 className="text-5xl md:text-9xl font-headline font-black tracking-tighter uppercase leading-[0.8] mb-12">
                  High-End<br/>Service <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Matrix.</span>
                </h1>
                <div className="flex flex-wrap gap-4">
@@ -87,7 +87,7 @@ const ServiceProvider = () => {
       <section className="py-32 px-8 md:px-24">
          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <div>
-               <h2 className="text-5xl md:text-8xl font-headline font-black uppercase tracking-tighter leading-none mb-12">
+               <h2 className="text-4xl md:text-8xl font-headline font-black uppercase tracking-tighter leading-none mb-12">
                  THE<br/><span className="text-secondary italic">PROTOCOL.</span>
                </h2>
                <p className="text-zinc-500 max-w-sm mb-12">A highly structured 4-phase deployment system for every service integration.</p>
