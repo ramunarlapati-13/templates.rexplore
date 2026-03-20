@@ -46,3 +46,105 @@
   background: #484849;
   border-radius: 10px;
 }
+
+/* Immersive 404 Overlay */
+.not-found-immersive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background: #0a0e27 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+
+.not-found-content {
+    background: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.four-zero-four-bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.not-found-content h1 {
+    color: #1a1f3a !important;
+    font-size: clamp(6rem, 15vw, 12rem);
+    margin: 0;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.not-found-content h3 {
+    color: #1a1f3a !important;
+    font-size: 2.5rem;
+    margin-top: -20px;
+}
+
+.not-found-content p {
+    color: #6b7280 !important;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.not-found-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.go-home-btn {
+    background: #39ac31;
+    color: white !important;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(57, 172, 49, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.explore-btn {
+    background: #1a1f3a;
+    color: white !important;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(26, 31, 58, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.go-home-btn:hover, .explore-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.go-home-btn:hover {
+    box-shadow: 0 15px 30px rgba(57, 172, 49, 0.4);
+}
+
+.explore-btn:hover {
+    box-shadow: 0 15px 30px rgba(26, 31, 58, 0.3);
+}

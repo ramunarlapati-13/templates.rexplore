@@ -83,4 +83,4 @@ A persistent floating navigation component (`/src/App.jsx`) that allows users to
 ```
 
 ---
-*© 2024 REXPLORE TECHNOLOGIES. All rights reserved. ENGINEERED FOR SCALE.*
+*© 2026 REXPLORE TECHNOLOGIES. All rights reserved. ENGINEERED FOR SCALE.*

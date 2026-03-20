@@ -97,6 +97,7 @@ import CatalogV1Page from './pages/CatalogV1';
 import CatalogV2Page from './pages/CatalogV2';
 import CatalogV3Page from './pages/CatalogV3';
 import StartupPage from './pages/Startup';
+import NotFoundPage from './pages/NotFound';
 
 
 
@@ -251,6 +252,7 @@ function App() {
         <Route path="/catalog-v2" element={<CatalogV2Page />} />
         <Route path="/catalog-v3" element={<CatalogV3Page />} />
         <Route path="/startup" element={<StartupPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
