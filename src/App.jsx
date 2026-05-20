@@ -3,7 +3,7 @@ import { LayoutGrid, ShoppingBag, User, FileText, Users, GraduationCap, Settings
 
 const REXPLORE_CATALOG = {
   BUSINESS: ["Corporate V1", "Corporate V2", "Brochure V1", "Brochure V2", "Brochure V3", "Service Provider V1", "Service Provider V2", "Catalog V1", "Catalog V2", "Catalog V3", "Startup"],
-  ECOMMERCE: ["Marketplace", "Brand Store", "Auction", "Dropshipping"],
+  ECOMMERCE: ["Marketplace V1", "Brand Store V1", "Auction", "Dropshipping"],
   PERSONAL: ["Portfolio", "Resume", "Personal Blog", "Memorial"],
   CONTENT: ["Niche Blog", "News Portal", "Magazine", "Wiki/Knowledge Base"],
   COMMUNITY: ["Social Network", "Forum", "Q&A Site", "Membership Portal"],
@@ -43,6 +43,8 @@ const TemplateDock = () => {
     '/catalog-v1': [{ name: 'Catalog V2', path: '/catalog-v2' }, { name: 'Catalog V3', path: '/catalog-v3' }],
     '/catalog-v2': [{ name: 'Catalog V1', path: '/catalog-v1' }, { name: 'Catalog V3', path: '/catalog-v3' }],
     '/catalog-v3': [{ name: 'Catalog V1', path: '/catalog-v1' }, { name: 'Catalog V2', path: '/catalog-v2' }],
+    '/marketplace-v1': [{ name: 'Brand Store V1', path: '/brand-store-v1' }],
+    '/brand-store-v1': [{ name: 'Marketplace V1', path: '/marketplace-v1' }],
   };
 
   const currentPath = location.pathname;
@@ -97,6 +99,8 @@ import CatalogV1Page from './pages/CatalogV1';
 import CatalogV2Page from './pages/CatalogV2';
 import CatalogV3Page from './pages/CatalogV3';
 import StartupPage from './pages/Startup';
+import MarketplaceV1Page from './pages/MarketplaceV1';
+import BrandStoreV1Page from './pages/BrandStoreV1';
 import NotFoundPage from './pages/NotFound';
 
 
@@ -144,6 +148,12 @@ function AppContent() {
     }
     if (subtype === 'Startup') {
       navigate('/startup');
+    }
+    if (subtype === 'Marketplace V1') {
+      navigate('/marketplace-v1');
+    }
+    if (subtype === 'Brand Store V1') {
+      navigate('/brand-store-v1');
     }
     // Add more mappings as more codes are uploaded
   };
@@ -252,6 +262,8 @@ function App() {
         <Route path="/catalog-v2" element={<CatalogV2Page />} />
         <Route path="/catalog-v3" element={<CatalogV3Page />} />
         <Route path="/startup" element={<StartupPage />} />
+        <Route path="/marketplace-v1" element={<MarketplaceV1Page />} />
+        <Route path="/brand-store-v1" element={<BrandStoreV1Page />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

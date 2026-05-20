@@ -11,7 +11,7 @@ This repository is a master collection of specialized, industrial-grade digital 
 | Category | Status | Subtypes Implemented |
 | :--- | :---: | :--- |
 | **01 BUSINESS** | 🟢 100% | Corporate (V1, V2), Brochure (V1-V3), Service Provider (V1, V2), Catalog (V1-V3), Startup |
-| **02 ECOMMERCE** | ⚪ 0% | *Planned: Marketplace, Brand Store, Auction, Dropshipping* |
+| **02 ECOMMERCE** | 🟡 50% | Marketplace V1, Brand Store V1 *(Planned: Auction, Dropshipping)* |
 | **03 PERSONAL** | ⚪ 0% | *Planned: Portfolio, Resume, Blog, Memorial* |
 | **04 CONTENT** | ⚪ 0% | *Planned: Niche Blog, News Portal, Magazine, Wiki* |
 | **05 COMMUNITY** | ⚪ 0% | *Planned: Social Network, Forum, Q&A Site, Membership Portal* |
