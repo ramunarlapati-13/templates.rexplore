@@ -34,6 +34,7 @@ const BrandStoreV1Page = () => {
         .brand-meta { color: #9ca3af; font-size: 13px; margin-bottom: 16px; }
         .brand-qty { display: inline-flex; border: 1px solid #394252; border-radius: 10px; overflow: hidden; margin-bottom: 14px; }
         .brand-qty button { width: 38px; background: #1a202b; color: #fff; border: none; cursor: pointer; font-size: 18px; }
+        .brand-qty button:disabled { opacity: 0.45; cursor: not-allowed; }
         .brand-qty span { width: 44px; display: inline-flex; align-items: center; justify-content: center; background: #12161f; }
         .brand-cta { width: 100%; border: none; background: #6ea8fe; color: #0b1320; padding: 12px 14px; border-radius: 12px; font-weight: 800; cursor: pointer; }
         .brand-ok { margin-top: 10px; color: #72d88e; font-size: 12px; font-weight: 700; min-height: 16px; }
@@ -62,17 +63,33 @@ const BrandStoreV1Page = () => {
                 <button
                   key={variant.name}
                   title={variant.name}
+                  aria-label={`Select ${variant.name} variant`}
                   className={`brand-swatch ${activeVariant.name === variant.name ? 'active' : ''}`}
                   style={{ background: variant.hex }}
-                  onClick={() => setActiveVariant(variant)}
+                  onClick={() => {
+                    setActiveVariant(variant);
+                    setQuantity((q) => Math.min(q, variant.stock));
+                  }}
                 />
               ))}
             </div>
 
             <div className="brand-qty">
-              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>-</button>
+              <button
+                aria-label="Decrease quantity"
+                disabled={quantity === 1}
+                onClick={() => setQuantity((q) => q - 1)}
+              >
+                -
+              </button>
               <span>{quantity}</span>
-              <button onClick={() => setQuantity((q) => q + 1)}>+</button>
+              <button
+                aria-label="Increase quantity"
+                disabled={quantity >= activeVariant.stock}
+                onClick={() => setQuantity((q) => q + 1)}
+              >
+                +
+              </button>
             </div>
 
             <button className="brand-cta" onClick={addToCart}>

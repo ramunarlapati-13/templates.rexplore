@@ -78,7 +78,12 @@ const MarketplaceV1Page = () => {
               <h3>{product.name}</h3>
               <p className="market-meta">Rating: {product.rating} / 5</p>
               <p className="market-price">${product.price}</p>
-              <button onClick={() => setCartCount((count) => count + 1)}>Add to cart</button>
+              <button
+                aria-label={`Add ${product.name} to cart`}
+                onClick={() => setCartCount((count) => count + 1)}
+              >
+                Add to cart
+              </button>
             </article>
           ))}
         </section>
